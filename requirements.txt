@@ -6,3 +6,4 @@ langchain-core
 langchain-google-genai
 faiss-cpu
 python-dotenv
+langchain-text-splitters
