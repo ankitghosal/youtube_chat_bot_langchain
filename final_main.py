@@ -15,7 +15,21 @@ from langchain_core.documents import Document
 
 
 load_dotenv()
-os.environ["GEMINI_API_KEY"] = os.getenv("GEMINI_API_KEY")
+
+# os.environ["GEMINI_API_KEY"] = os.getenv("GEMINI_API_KEY")
+
+api_key = os.getenv("GEMINI_API_KEY")
+
+# fallback to Streamlit secrets
+if not api_key:
+    try:
+        api_key = st.secrets["GEMINI_API_KEY"]
+    except:
+        st.error("API key not found. Set it in .env or Streamlit secrets.")
+        st.stop()
+
+os.environ["GEMINI_API_KEY"] = api_key
+
 
 # ── Page config ────────────────────────────────────────────────────────────────
 st.set_page_config(
