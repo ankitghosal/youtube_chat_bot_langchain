@@ -1,0 +1,7 @@
+1. 3Blue1Brown — But what is a Neural Network? — youtube.com/watch?v=aircAruvnKk
+
+2. 3Blue1Brown — Transformers, the tech behind LLMs — youtube.com/watch?v=wjZofJX0v4M
+
+3. CampusX — What is Deep Learning? (Hindi) — youtube.com/watch?v=fHF22Wxuyw4
+
+4. CodeWithHarry — All About ML & Deep Learning (Hindi) — youtube.com/watch?v=C6YtPJxNULA
