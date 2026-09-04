@@ -184,7 +184,7 @@ Answer:""",
     )
 
     # 6. Chain
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.2)
+    llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash-lite", temperature=0.5)
     parallel_chain = RunnableParallel({
         "question": RunnablePassthrough(),
         "context": retriever | RunnableLambda(
