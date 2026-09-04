@@ -1,11 +1,11 @@
 # 🎬 YouTube RAG Chatbot
 
-An intelligent video conversation agent built with **LangChain**, **Google Gemini**, and **Streamlit**. This tool allows you to paste a YouTube link, automatically ingest its transcript, and ask questions about the content with precise timestamp references.
+An intelligent video conversation agent built with **LangChain**, **Google Gemini**, **FastAPI**, and a retro HTML/CSS/JavaScript client. Paste a YouTube link, ingest its transcript, and ask questions about the content with precise timestamp references.
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![LangChain](https://img.shields.io/badge/Framework-LangChain-green.svg)
 ![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-orange.svg)
-![Streamlit](https://img.shields.io/badge/UI-Streamlit-red.svg)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg)
 
 ---
 
@@ -16,7 +16,7 @@ An intelligent video conversation agent built with **LangChain**, **Google Gemin
 - **Timestamped Citations**: Answers include direct "Jump-to" links to the exact moments in the video where the information was discussed.
 - **Multilingual Support**: Automatically fetches transcripts in English, Hindi, and regional variations.
 - **Rate-Limit Resilience**: Built-in exponential backoff and retry logic to handle Google Gemini API `429 RESOURCE_EXHAUSTED` errors gracefully.
-- **Persistent Chat**: A polished Streamlit interface with full chat history and session-state persistence.
+- **Minimal UI**: A lightweight retro terminal interface with full in-browser chat history.
 
 ## 🛠️ Tech Stack
 
@@ -24,7 +24,8 @@ An intelligent video conversation agent built with **LangChain**, **Google Gemin
 - **Embeddings**: Google Generative AI Embeddings (`models/gemini-embedding-001`)
 - **Vector Store**: FAISS (Facebook AI Similarity Search)
 - **Orchestration**: LangChain Expression Language (LCEL)
-- **Frontend**: Streamlit
+- **Backend**: FastAPI + Uvicorn
+- **Frontend**: HTML, CSS, and vanilla JavaScript
 
 ## 🚀 Getting Started
 
@@ -40,6 +41,14 @@ Create a `.env` file in the root directory and add your Gemini API key:
 env GEMINI_API_KEY=your_api_key_here
 
 ### 4. Running the App
+
+Start the API and frontend with:
+
+```bash
+uvicorn backend:app --reload
+```
+
+Open http://127.0.0.1:8000 in your browser.
 ## 📖 How it Works
 
 1. **Transcript Fetching**: Uses `youtube-transcript-api` to retrieve raw text segments.

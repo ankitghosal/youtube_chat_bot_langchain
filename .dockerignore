@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+.git/
+.gitignore
+.venv/
+venv/
+demo.txt
+final_main.py
+README.md

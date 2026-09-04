@@ -1,4 +1,5 @@
-streamlit
+fastapi
+uvicorn[standard]
 youtube-transcript-api
 langchain
 langchain-community
